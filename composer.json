@@ -1,0 +1,13 @@
+{
+
+	"name":"MyFramework PHP",
+	"description":"PHP Framewrork",
+	"keywords":[
+		"PHP","PHP Framewrork"
+	],
+	"require":{
+		"php":">=5.3.0",
+		"filp/whoops":"*",
+		"monolog/monolog": "^1.22"
+	}
+}
