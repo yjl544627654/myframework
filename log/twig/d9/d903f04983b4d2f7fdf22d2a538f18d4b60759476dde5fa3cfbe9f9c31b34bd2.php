@@ -73,6 +73,6 @@ class __TwigTemplate_2e1d835b8750d0c8d79521bd8c50cd9354514dea56723f0741456bcf7d1
 
 \t
 {% endblock  %}
-", "test.html", "C:\\wamp\\www\\myFramework\\app\\viwes\\test.html");
+", "test.html", "C:\\wamp\\www\\myframework\\app\\viwes\\test.html");
     }
 }
