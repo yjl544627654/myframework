@@ -6,10 +6,21 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit9508ff35b27be3ee07f95c1589a50fc6
 {
+    public static $files = array (
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
+        'c7359326b6707d98bdc176bf9ddeaebf' => __DIR__ . '/..' . '/catfan/medoo/medoo.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
         'W' => 
         array (
             'Whoops\\' => 7,
+        ),
+        'S' => 
+        array (
+            'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Component\\VarDumper\\' => 28,
         ),
         'P' => 
         array (
@@ -26,6 +37,14 @@ class ComposerStaticInit9508ff35b27be3ee07f95c1589a50fc6
         array (
             0 => __DIR__ . '/..' . '/filp/whoops/src/Whoops',
         ),
+        'Symfony\\Polyfill\\Mbstring\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'Symfony\\Component\\VarDumper\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/var-dumper',
+        ),
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
@@ -36,11 +55,22 @@ class ComposerStaticInit9508ff35b27be3ee07f95c1589a50fc6
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'T' => 
+        array (
+            'Twig_' => 
+            array (
+                0 => __DIR__ . '/..' . '/twig/twig/lib',
+            ),
+        ),
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit9508ff35b27be3ee07f95c1589a50fc6::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit9508ff35b27be3ee07f95c1589a50fc6::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit9508ff35b27be3ee07f95c1589a50fc6::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }

@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title><?php echo $title ?></title>
-</head>
-<body>
+{% extends "layout.html" %}
 
-<h1><?php echo $hello ?></h1>
+{% block content %}
 
 
-</body>
-</html>
+	<h1>{{hello}}</h1>
+
+	
+{% endblock  %}

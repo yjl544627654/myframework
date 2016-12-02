@@ -4,18 +4,18 @@ use core\lib\conf;
 /**
 * 数据库连接
 */
-class Model extends \PDO
+class Model extends \medoo
 {
 	
 	function __construct()
 	{
-		$data = conf::get('database');
 
-		try {
-			//parent::__construct($data['DSN'],$data['USER'],$data['PWD']);
-		} catch (\PPDException $e) {
-			var_dump($e->getMessage());
-		}
+		$option = conf::get('database');
+
+	
+		parent::__construct($option);
+
+		
 	}
 
 }

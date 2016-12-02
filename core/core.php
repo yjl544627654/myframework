@@ -55,11 +55,21 @@ class core
 
 	}
 
-	public function display($file){	
-		$file = APP.'/viwes/'.$file;
+	public function display($filename){	
+		$file = APP.'/viwes/'.$filename;
 		if(is_file($file)){
-			extract($this->assign); // 关键函数，赋值到给html文件使用
-			include $file;
+			//extract($this->assign); // 关键函数，赋值到给html文件使用
+			//使用 twig 模板引擎
+			\Twig_Autoloader::register();
+
+			$loader = new \Twig_Loader_Filesystem(APP.'/viwes/');
+			$twig = new \Twig_Environment($loader, array(
+				'cache' => IMOOC.'/log/twig/',
+				'debug'=>DEBUG
+			));
+			$template  = $twig->loadTemplate($filename);
+			$template ->display($this->assign?$this->assign:'');
+
 		}
 	}
 }

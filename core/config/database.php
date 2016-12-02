@@ -1,8 +1,10 @@
 <?php
 return array(
-
-	'DSN'=>'mysql:host=localhost;dbname=school',
-	'USER'=>'root',
-	'PWD'=>'',
+	'database_type' => 'mysql',
+    'database_name' => 'school',
+    'server' => 'localhost',
+    'username' => 'root',
+    'password' => '',
+    'charset' => 'utf8'
 
 );
